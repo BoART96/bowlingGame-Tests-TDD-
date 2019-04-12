@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bowling Game</title>
+    <link rel="stylesheet" href="css/jasmine.css" />
+    <script type ="tetx/javascript" src="Scripts/jasmine.js"></script>
+    <script type="tetx/javascript" src="Scripts/jasmine-html.js"></script>
+</head>
+<body>
+        <script type ="tetx/javascript" src="BowlingGame.js"></script>
+        <script type="tetx/javascript" src="bowlingGameTest.js"></script>
+        <script type="text/javascript">
+             var jasmineEnviromenment = jasmine.getEnv();
+             var htmlReporter = new jasmine.HtmlReporter();
+
+             jasmineEnviromenment.addReporter(htmlReporter);
+             jasmineEnviromenment.specFilter = function (spec) {
+                return htmlReporter.specFilter(spec);
+             };
+
+             window.onload = function () {
+                 jasmineEnviromenment.execute();
+             };
+        </script>
+</body>
+</html>
